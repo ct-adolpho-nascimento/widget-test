@@ -1,5 +1,6 @@
-import './style.css'
+// import './style.css'
 import { setupBtn } from './script-interation.js'
+import { styles } from "./assets.js"
 
 document.querySelector('#app').innerHTML = `
 <body>
@@ -38,3 +39,8 @@ document.querySelector('#app').innerHTML = `
 `
 
 setupBtn(document.querySelector('#counter'))
+
+const styleTag = document.createElement("style")
+styleTag.innerHTML = styles.replace(/^\s+|\n/gm, "")
+
+document.head.appendChild(styleTag)
