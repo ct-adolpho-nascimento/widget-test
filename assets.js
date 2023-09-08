@@ -1,126 +1,41 @@
 export const styles = `
-    .widget__container * {
-        box-sizing: border-box;
-    }        
+  *, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
 
-    h3, p, input {
-        margin: 0;
-        padding: 0;
-    }
+  body {
+    font-family: 'Inter', sans-serif;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    font-size: 2rem;
+    line-height: 1.5;
+    background-color: var(--bkg);
+    color: var(--txt);
+  }
 
-    .widget__container {
-        box-shadow: 0 0 18px 8px rgba(0, 0, 0, 0.1), 0 0 32px 32px rgba(0, 0, 0, 0.08);
-        width: 400px;
-        overflow: auto;
-        right: -25px;
-        bottom: 75px;
-        position: absolute;
-        transition: max-height .2s ease;
-        font-family: Helvetica, Arial ,sans-serif;
-        background-color: #e6e6e6a6;
-        border-radius: 10px;
-        box-sizing: border-box;
-    }
+  .container {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.17'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    border: 2px solid gray;
+    padding: 20px;
+    border-radius: 10px;
+  }
 
-    .widget__icon {
-        cursor: pointer;
-        width: 60%;
-        position: absolute;
-        top: 18px;
-        left: 16px;
-        transition: transform .3s ease;
-    }
+  p {
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
 
-    .widget__hidden {
-        transform: scale(0);
-    }
-    .button__container {
-        border: none;
-        background-color: #0f172a;
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        cursor: pointer;
-    }
-
-    .widget__container.hidden {
-        max-height: 0px;
-    }
-
-    .widget__header {
-        padding: 1rem 2rem 1.5rem;
-        background-color: #000;
-        color: #fff;
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
-        text-align: center;
-    }
-
-    .widget__header h3 {
-        font-size: 24px;
-        font-weight: 400;
-        margin-bottom: 8px;
-    }
-
-    form {
-        padding: 2rem 1rem 1.5rem;
-    }
-
-    form .form__field {
-        margin-bottom: 1.5rem;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .form__field label {
-        margin-bottom: 8px;
-        font-size: 14px;
-    }
-
-    .form__field input,
-    .form__field textarea {
-        border: 1px solid #000000ad;
-        border-radius: 3px;
-        padding: 8px 10px;
-        background-color: #fff;
-    }
-
-    .form__field input {
-        height: 48px;
-    }
-
-    .form__field textarea::placeholder {
-        font-family: Helvetica, Arial ,sans-serif;
-    }
-
-    form button {
-        height: 48px;
-        border-radius: 6px;
-        font-size: 18px;
-        background-color: #000;
-        color: #fff;
-        border: 0;
-        width: 100%;
-        cursor: pointer;
-    }
-
-    form button:hover {
-        background-color: rgba(0, 0, 0, 95%);
-    }
-`;
-
-export const MESSAGE_ICON = `
-    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="#FFFFFF"
-        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail">
-        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-        <polyline points="22,6 12,13 2,6"></polyline>
-    </svg>
-`;
-
-export const CLOSE_ICON = `
-    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="#FFFFFF" stroke="#FFFFFF"
-        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x">
-        <line x1="18" y1="6" x2="6" y2="18"></line>
-        <line x1="6" y1="6" x2="18" y2="18"></line>
-    </svg>
+  .text-container {
+    display: grid;
+    gap: .6rem;
+  }
 `;
