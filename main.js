@@ -1,6 +1,6 @@
 import { styles } from "./assets.js"
 
-class MessageWidget {
+class CardWeatherWidget {
   constructor() {
     this.initialize()
     this.injectStyles()
@@ -41,7 +41,7 @@ class MessageWidget {
 }
 
 function initializeWidget() {
-  return new MessageWidget()
+  return new CardWeatherWidget()
 }
 
 initializeWidget()
