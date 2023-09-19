@@ -1,47 +1,15 @@
-import { styles } from "./assets.js"
+// import abc from 'acn-weather-widget'
 
-class CardWeatherWidget {
-  constructor() {
-    this.initialize()
-    this.injectStyles()
-  }
+// abc()
 
+// Importe a biblioteca
+import WeatherWidget from 'acn-weather-widget';
 
-  async initialize() {
-    /**
-     * Invoke the `createWidget()` method
-     */
-    this.createWidgetContent()
+// Chave secreta fornecida pelo proprietário da biblioteca
+const apiKey = 'SUA_CHAVE_SECRETA';
 
-  }
+// Crie uma instância do widget e especifique a cidade
+const widget = new WeatherWidget('Montes Claros', apiKey);
 
-  createWidgetContent() {
-    document.querySelector('#app').innerHTML = `
-    <body>
-      <div class="container">
-        <div class="text-container">
-          <h2>Montes Claros - MG</h2>
-          <p>
-            Previsão no momento: 25° C
-            <img src="https://www.climatempo.com.br/dist/images/v2/svg/2n.svg" />
-          </p>
-        </div>
-      </div>
-    </body>
-    `
-  }
-
-  injectStyles() {
-    const styleTag = document.createElement("style")
-    styleTag.innerHTML = styles.replace(/^\s+|\n/gm, "")
-
-    document.head.appendChild(styleTag)
-  }
-
-}
-
-function initializeWidget() {
-  return new CardWeatherWidget()
-}
-
-initializeWidget()
+// Renderize o widget em um elemento HTML
+widget.render(document.getElementById('weather-widget'));
